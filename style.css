@@ -1,19 +1,83 @@
-*{
+@font-face {
+  font-family: yekan;
+  src: url("/assets/font/yekan-font/yekan-regular.woff");
+  src: url("/assets/font/yekan-font/yekan-regular.ttf");
+}
+
+:root{
+  --primary-color: #58f7ff;
+  --secondary-color: #3cff00;
+  --tertiary-color: #ff8c69;
+  --quaternary-color: #ff0000;
+  --quinary-color: #0000ff;
+  --senary-color: #000000;
+  --septenary-color: #ffffff;
+  --octonary-color: #808080;
+  --nonary-color: #800000;
+  --denary-color: #008000;
+}
+
+* {
+  font-family: yekan;
   box-sizing: border-box;
 }
 
-.container{
-  display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px;
-  width: 500px;
-  height: 500px;
-  border: 2px solid #333;
-  background: #f5f5f5;
-  gap: 10px;
+body {
+  font-family: sans-serif;
+  direction: rtl;
+  padding: 2rem;
 }
 
-.item{
-  background-color: lightcoral;
+.grid-container {
+  display: grid;
+  grid-template-columns: 5fr repeat(2, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  gap: 10px;
+  background-color: #eee;
+  border: 2px solid #333;
+  height: 500px;
   padding: 10px;
+
+  /* مقادیر قابل تغییر برای تمرین */
+  /* align-items: center;
+  justify-items: center; */
+  align-content: center;
+  justify-content: center;
+}
+
+.item {
+  background-color: #58f7ff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 8px;
+}
+.item:nth-child(1)  {
+  background-color: var(--primary-color);
+}
+.item:nth-child(2) {
+  background-color: var(--secondary-color);
+}
+.item:nth-child(3) {
+  background-color: var(--tertiary-color);
+}
+
+.item:nth-child(4) {
+  background-color: var(--quaternary-color);
+}
+.item:nth-child(5) {
+  background-color: var(--quinary-color);
+}
+.item:nth-child(6) {
+  background-color: var(--senary-color);
+}
+
+
+
+img {
+  max-width:  150PX;
+  /* height: 100%; */
+  object-fit: cover;
 }
